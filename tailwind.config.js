@@ -1,5 +1,6 @@
 module.exports = {
   content: ['index.html'],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -10,7 +11,7 @@ module.exports = {
         primary: '#f09605',
         secondary: '#E0E0E0',
         third: "#bfd0e0",
-        dark: '#404042',
+        dark: '#0F0F0F',
       },
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
