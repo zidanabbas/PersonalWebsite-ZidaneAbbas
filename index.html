@@ -10,6 +10,14 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./src/css/style.css" />
   <title class="font-Poppins font-semibold">hi, i'm abbas</title>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+        '(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 </head>
 
 <body>
@@ -55,7 +63,7 @@
                 <a href="#contact"
                   class="mx-8 flex py-2 text-base text-primary group-hover:text-secondary dark:text-white">Contact</a>
               </li>
-              <li class="flex items-center pl-8">
+              <li class="mt-3 lg:mt-0 flex items-center pl-8">
                 <div class="flex">
                   <span class="mr-2 text-sm text-slate-500">light</span>
                   <input type="checkbox" class="hidden" id="dark-toggle" />
@@ -76,19 +84,19 @@
   <!-- Header End -->
 
   <!-- Hero Section Start -->
-  <section id="home" class="pt-24 pb-36 dark:bg-dark">
+  <section id="home" class="pt-24 pb-36 bg-third dark:bg-dark">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right">
           <h1 class="text-base font-semibold text-primary md:text-xl">
             Hi, Everyone. I'm
-            <span class="mt-1 block text-4xl font-bold text-white dark:text-white lg:text-5xl">Zidane Abbas</span>
+            <span class="mt-1 block text-4xl font-bold text-secondary dark:text-white lg:text-5xl">Zidane Abbas</span>
           </h1>
           <h2 class="text mb-5 text-lg font-semibold text-primary lg:text-2xl">
             I'm Frontend Developer |
-            <span class="font-bold text-white dark:text-white">Designer</span>
+            <span class="font-bold text-secondary dark:text-white">Web Developer</span>
           </h2>
-          <p class="mb-10 font-medium leading-relaxed text-primary">
+          <p class="mb-10 font-medium leading-relaxed text-secondary dark:text-white">
             My Name is Abbas, I make amazing things.
           </p>
           <button onclick="unduhFile()"
@@ -101,7 +109,7 @@
             <img src="./src/img/zidan.png" alt="Zidane Abbas" class="relative z-10 mx-auto max-w-full" />
             <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
               <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#bae8e8"
+                <path fill="#fffffe"
                   d="M37.6,-54.1C50.5,-42.5,63.8,-33.8,65.8,-22.5C67.9,-11.3,58.8,2.4,55.2,19.3C51.7,36.2,53.6,56.3,45.3,63.8C37,71.3,18.5,66.2,3.7,61.1C-11.2,56,-22.3,51.1,-35.6,45.2C-48.8,39.3,-64.1,32.6,-66.9,22.2C-69.7,11.8,-59.9,-2.3,-55.6,-18.8C-51.3,-35.4,-52.4,-54.5,-44,-67.6C-35.7,-80.6,-17.8,-87.6,-2.7,-83.9C12.4,-80.1,24.8,-65.7,37.6,-54.1Z"
                   transform="translate(100 100) scale(1.2)" />
               </svg>
@@ -114,17 +122,17 @@
   <!-- Hero Section End -->
 
   <!-- About Section Start -->
-  <section id="about" class="pt-24 pb-36">
+  <section id="about" class="pt-24 pb-36 dark:bg-dark">
     <div class="container">
       <div class="flex flex-wrap" data-aos="fade-up">
         <div class="mb-10 w-full px-4 lg:w-1/2">
-          <h4 class="mb-3 text-lg font-bold uppercase text-primary">
+          <h4 class="mb-3 text-lg font-bold uppercase text-third dark:text-secondary">
             About Me
           </h4>
-          <h2 class="mb-5 max-w-md text-3xl font-bold text-secondary lg:text-4xl">
+          <h2 class="mb-5 max-w-md text-3xl font-bold text-third dark:text-primary lg:text-4xl">
             Hi, Introduce My Self.
           </h2>
-          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
+          <p class="max-w-xl text-base font-medium text-paragraph dark:text-secondary lg:text-lg">
             I am a student from a university in Indonesia. <br /><br />
             I have a very ambitious nature, thirst for something new, and
             enjoy working in a team. My daily activities are exploring,
@@ -133,10 +141,10 @@
           </p>
         </div>
         <div class="w-full px-4 lg:w-1/2">
-          <h3 class="mb-4 text-2xl font-semibold text-secondary lg:pt-10 lg:text-3xl">
+          <h3 class="mb-4 text-2xl font-semibold text-third dark:text-secondary lg:pt-10 lg:text-3xl">
             Social Media
           </h3>
-          <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
+          <p class="mb-6 text-base font-medium text-paragraph dark:text-secondary lg:text-lg">
             Find me on !
           </p>
           <div class="flex items-center">
@@ -175,14 +183,14 @@
   <!-- About Section End -->
 
   <!-- Portfolio Section Start -->
-  <section id="portfolio" class="pt-24 pb-36">
+  <section id="portfolio" class="pt-24 pb-36 bg-third dark:bg-smoothDark">
     <div class="container">
       <div class="w-full px-4" data-aos="zoom-in-up">
         <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
+          <h4 class="mb-2 text-lg font-semibold uppercase text-white dark:text-secondary">
             Portfolio
           </h4>
-          <h2 class="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl">
+          <h2 class="mb-4 text-3xl font-bold text-white dark:text-primary sm:text-4xl lg:text-5xl">
             My Latest Featured Projects
           </h2>
           <p class="text-medium font-medium text-secondary md:text-lg">
@@ -192,7 +200,7 @@
       </div>
       <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
         <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left">
-          <div class="overflow-hidden rounded-md bg-white shadow-md">
+          <div class="overflow-hidden rounded-md bg-slate-200 shadow-md">
             <img src="./src/img/portfolio/ImageFull.png" alt="Landing Page Music" class="w-full" />
             <h3 class="mx-3 mt-5 mb-3 text-xl font-semibold text-dark">
               Landing Page Music
@@ -209,46 +217,45 @@
   <!-- Portfolio Section End -->
 
   <!-- Clients Section Start -->
-  <section id="clients" class="pt-36 pb-36">
-    <div class="container">
-      <div class="w-full px-4" data-aos="fade-down-right">
-        <div class="mx-auto mb-16 text-center">
-          <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
-            Client's
-          </h4>
-          <h2 class="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl">
-            Cooperate
-          </h2>
-          <p class="text-medium font-medium text-secondary md:text-lg">
-            Some of the companies I work with.
-          </p>
-        </div>
+  <section id="clients" class="pt-36 pb-36 dark:bg-smoothDark">
+    <div class=" w-full px-4" data-aos="fade-down-right">
+      <div class="mx-auto mb-16 text-center">
+        <h4 class="mb-2 text-lg font-semibold uppercase text-paragraph dark:text-secondary">
+          Client's
+        </h4>
+        <h2 class="mb-4 text-3xl font-bold text-third dark:text-primary sm:text-4xl lg:text-5xl">
+          Cooperate
+        </h2>
+        <p class="text-medium font-medium text-paragraph dark:text-secondary md:text-lg">
+          Some of the companies I work with.
+        </p>
       </div>
-      <div class="w-full px-4" data-aos="flip-up">
-        <div class="flex flex-wrap items-center justify-center">
-          <a href="https://www.tokopedia.com/" target="_blank"
-            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-            <img src="./src/img/clients/tokopedia.svg" alt="Tokopedia" />
-          </a>
-          <a href="https://www.traveloka.com/en-id/" target="_blank"
-            class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
-            <img src="./src/img/clients/Traveloka.svg" alt="Traveloka" />
-          </a>
-        </div>
+    </div>
+    <div class="w-full px-4" data-aos="flip-up">
+      <div class="flex flex-wrap items-center justify-center">
+        <a href="https://www.tokopedia.com/" target="_blank"
+          class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+          <img src="./src/img/clients/tokopedia.svg" alt="Tokopedia" />
+        </a>
+        <a href="https://www.traveloka.com/en-id/" target="_blank"
+          class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+          <img src="./src/img/clients/Traveloka.svg" alt="Traveloka" />
+        </a>
       </div>
+    </div>
     </div>
   </section>
   <!-- Clients Section End -->
 
   <!-- Blog Section Start -->
-  <section id="blog" class="pt-24 pb-36">
+  <section id="blog" class="pt-24 pb-36 bg-third dark:bg-dark">
     <div class="container">
       <div class="w-full px-4" data-aos="zoom-in-up">
         <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
+          <h4 class="mb-2 text-lg font-semibold uppercase text-white">
             Blog
           </h4>
-          <h2 class="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl">
+          <h2 class="mb-4 text-3xl font-bold text-white dark:text-primary sm:text-4xl lg:text-5xl">
             My Recent Blog
           </h2>
           <p class="text-medium font-medium text-secondary md:text-lg">
@@ -260,7 +267,7 @@
 
       <div class="flex flex-wrap justify-center">
         <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-left">
-          <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
+          <div class="mb-10 overflow-hidden rounded-xl bg-slate-200 shadow-lg">
             <img src="./src/img/photography/1.JPG" alt="" class="w-full" />
             <div class="py-8 px-6">
               <h3>
@@ -270,7 +277,8 @@
               <p class="mb-6 text-base font-medium text-dark">
                 This is my first work in the field of photography.
               </p>
-              <a href="#" class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">View
+              <a href="#"
+                class="rounded-lg bg-third dark:bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80">View
                 More</a>
             </div>
           </div>
@@ -281,17 +289,17 @@
   <!-- Blog Section End -->
 
   <!-- Contact Section Start -->
-  <section id="contact" class="pt-24 pb-36">
+  <section id="contact" class="pt-24 pb-36  dark:bg-smoothDark">
     <div class="container">
       <div class="w-full px-4" data-aos="zoom-in-up">
         <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold uppercase text-primary">
+          <h4 class="mb-2 text-lg font-semibold uppercase text-paragraph dark:text-secondary">
             Contact
           </h4>
-          <h2 class="mb-4 text-3xl font-bold text-secondary sm:text-4xl lg:text-5xl">
+          <h2 class="mb-4 text-3xl font-bold text-third dark:text-primary sm:text-4xl lg:text-5xl">
             Say Hello
           </h2>
-          <p class="text-medium font-medium text-secondary md:text-lg">
+          <p class="text-medium font-medium text-paragraph dark:text-secondary md:text-lg">
             email-[at]-gmail-[dot]-com.
           </p>
         </div>
@@ -299,12 +307,12 @@
       <form action="https://formspree.io/f/mknlbgyn" method="post">
         <div class="w-full lg:mx-auto lg:w-2/3" data-aos="zoom-in-left">
           <div class="mb-8 w-full px-4">
-            <label for="name" class="text-base font-bold text-primary">Name</label>
+            <label for="name" class="text-base font-bold text-third dark:text-primary">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter Your Name..."
               class="w-full rounded-md bg-slate-300 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
           </div>
           <div class="mb-8 w-full px-4">
-            <label for="email" class="text-base font-bold text-primary"><span
+            <label for="email" class="text-base font-bold text-third dark:text-primary"><span
                 class="after:ml-0.5 after:text-red-600 after:content-['*']">E-mail</span></label>
             <input type="email" id="email" name="email" placeholder="Enter Your E-mail..."
               class="peer w-full rounded-md bg-slate-300 p-3 text-dark invalid:text-red-600 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary invalid:focus:border-red-700 invalid:focus:ring-red-700" />
@@ -313,13 +321,13 @@
             </p>
           </div>
           <div class="mb-8 w-full px-4">
-            <label for="Message" class="text-base font-bold text-primary">Message</label>
+            <label for="Message" class="text-base font-bold text-third dark:text-primary">Message</label>
             <textarea type="text" id="Message" name="message" placeholder="Please leave a message here..."
               class="h-32 w-full rounded-md bg-slate-300 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
           </div>
           <div class="w-full px-4">
             <button name="submit"
-              class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
+              class="w-full rounded-full bg-third dark:bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
               Send it !
             </button>
           </div>

@@ -554,10 +554,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-\[9999\] {
   z-index: 9999;
 }
@@ -584,6 +580,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mr-2 {
@@ -847,9 +847,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-third {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 70 67 / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(240 150 5 / var(--tw-bg-opacity));
+  background-color: rgb(249 188 96 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .bg-slate-300 {
@@ -1021,7 +1031,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(240 150 5 / var(--tw-text-opacity));
+  color: rgb(249 188 96 / var(--tw-text-opacity));
 }
 
 .text-slate-500 {
@@ -1029,9 +1039,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
-.text-dark {
+.text-secondary {
   --tw-text-opacity: 1;
-  color: rgb(15 15 15 / var(--tw-text-opacity));
+  color: rgb(255 255 254 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1039,9 +1049,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-secondary {
+.text-third {
   --tw-text-opacity: 1;
-  color: rgb(224 224 224 / var(--tw-text-opacity));
+  color: rgb(0 70 67 / var(--tw-text-opacity));
+}
+
+.text-paragraph {
+  --tw-text-opacity: 1;
+  color: rgb(45 51 74 / var(--tw-text-opacity));
 }
 
 .text-pink-600 {
@@ -1057,6 +1072,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-purple-700 {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(15 15 15 / var(--tw-text-opacity));
 }
 
 .text-red-600 {
@@ -1114,13 +1134,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.ease-linear {
-  transition-timing-function: linear;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #004643;
+  background-color: #dce5dc;
 }
 
 .navbar-fixed {
@@ -1210,32 +1226,22 @@ body {
 
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(240 150 5 / var(--tw-border-opacity));
-}
-
-.hover\:border-b-orange-700:hover {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(194 65 12 / var(--tw-border-opacity));
-}
-
-.hover\:border-b-white:hover {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: rgb(249 188 96 / var(--tw-border-opacity));
 }
 
 .hover\:border-b-primary:hover {
   --tw-border-opacity: 1;
-  border-bottom-color: rgb(240 150 5 / var(--tw-border-opacity));
+  border-bottom-color: rgb(249 188 96 / var(--tw-border-opacity));
 }
 
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(240 150 5 / var(--tw-bg-opacity));
+  background-color: rgb(249 188 96 / var(--tw-bg-opacity));
 }
 
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(240 150 5 / var(--tw-text-opacity));
+  color: rgb(249 188 96 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-80:hover {
@@ -1257,21 +1263,9 @@ body {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.hover\:duration-200:hover {
-  transition-duration: 200ms;
-}
-
-.hover\:duration-1000:hover {
-  transition-duration: 1000ms;
-}
-
-.hover\:duration-700:hover {
-  transition-duration: 700ms;
-}
-
 .focus\:border-primary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(240 150 5 / var(--tw-border-opacity));
+  border-color: rgb(249 188 96 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1287,7 +1281,7 @@ body {
 
 .focus\:ring-primary:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(240 150 5 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(249 188 96 / var(--tw-ring-opacity));
 }
 
 .invalid\:focus\:border-red-700:focus:invalid {
@@ -1302,7 +1296,7 @@ body {
 
 .group:hover .group-hover\:text-secondary {
   --tw-text-opacity: 1;
-  color: rgb(224 224 224 / var(--tw-text-opacity));
+  color: rgb(255 255 254 / var(--tw-text-opacity));
 }
 
 .peer:invalid ~ .peer-invalid\:visible {
@@ -1332,9 +1326,29 @@ body {
   background-color: rgb(15 15 15 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-smoothDark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 21 21 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 188 96 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 254 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(249 188 96 / var(--tw-text-opacity));
 }
 
 .dark .dark\:shadow-slate-400 {
